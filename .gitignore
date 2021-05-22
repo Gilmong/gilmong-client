@@ -1,5 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# empty folders
+!src/assets/img/.keep
+!src/components/mypage/.keep
+
 # dependencies
 /node_modules
 /.pnp
