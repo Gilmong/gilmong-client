@@ -11,8 +11,14 @@ const DetailForm = ({getUserData}) => {
         dreamName: "",
         dreamKeyword: "",
         dreamPrice: "",
-        dreamDescription: ""
+        dreamDescription: "",
+        dreamPicture: ""
     })
+
+    const getDreamPicture = async (image) => {
+        console.log(image)
+        // alert("done")
+    };
 
     const handleChange = (e) => {
         console.log(0);
@@ -21,15 +27,23 @@ const DetailForm = ({getUserData}) => {
             [e.target.name]: e.target.value
         });
     };
-
+    // function handleSaveClick() {
+    //     const image = canvas.toDataURL();
+    //     const link = document.createElement("a");
+    //     link.href = image;
+    //     link.download = "PaintJS by soryeongk";
+    //     link.click();
+    // }
     const handleSubmit = (event) => {
         event.preventDefault();
+        inputs.dreamPicture = 
         getUserData(inputs);
         setInputs({
             dreamName: "",
             dreamKeyword: "",
             dreamPrice: "",
-            dreamDescription: ""
+            dreamDescription: "",
+            dreamPicture: ""
         });
     };
 
@@ -44,7 +58,7 @@ const DetailForm = ({getUserData}) => {
             </div>
             <div id="text">나의 길몽은</div>
             <div className="detail">
-                <DreamCanvas />
+                <DreamCanvas getDreamPicture={getDreamPicture}/>
                 <div className="detail__info">
                     <form>
                         <input
@@ -163,6 +177,9 @@ const DetailFormWrap = styled.div`
             }
             #last {
                 height: 37rem;
+            }
+            &--form::placeholder {
+                color: white;
             }
         }
     }

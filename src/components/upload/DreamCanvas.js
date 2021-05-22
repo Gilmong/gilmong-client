@@ -9,7 +9,7 @@ const DreamCanvas = () => {
     useEffect(() => {
         const canvas = canvasRef.current;
         ctx = canvas.getContext("2d");
-        ctx.strokeStyle="black";
+        ctx.strokeStyle = "white";
         canvas.addEventListener("mousemove", onMouseMove);
         canvas.addEventListener("mousedown", startPainting);
         canvas.addEventListener("mouseup", stopPainting);
@@ -19,6 +19,7 @@ const DreamCanvas = () => {
     function onMouseMove(event) {
         const x = event.offsetX;
         const y = event.offsetY;
+        console.log(x);
     
         if (!painting) {
             ctx.beginPath();
@@ -50,6 +51,7 @@ const DreamCanvasWrap = styled.div`
     flex-direction: column;
     #canvas {
         width: 104.4rem;
+        height: 59rem;
         border: 0.1rem solid;
         border-color: white;
     }
