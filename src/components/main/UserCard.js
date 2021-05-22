@@ -16,7 +16,7 @@ const UserCardWrap = styled.div`
       justify-content: space-between;
 
       > * {
-        border: 1px solid #878787;
+        border: 1px solid #dbae6e;
         width: 24.5rem;
         box-sizing: border-box;
         padding: 1.857rem 3.505rem;
@@ -26,7 +26,7 @@ const UserCardWrap = styled.div`
     &__coin {
       box-sizing: border-box;
       padding: 1.857rem 3.505rem;
-      border: 1px solid #878787;
+      border: 1px solid #dbae6e;
       width: 100%;
       height: 16.074rem;
       display: flex;
@@ -51,7 +51,7 @@ const UserCardWrap = styled.div`
       &--number {
         font-size: 5rem;
         font-weight: 700;
-        color: #ffa34e;
+        color: #dbae6e;
       }
 
       &--char {

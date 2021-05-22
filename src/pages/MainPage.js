@@ -1,20 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import DealCard from "../components/main/DealCard";
 import DreamCard from "../components/main/DreamCard";
 import UserCard from "../components/main/UserCard";
+import ApiService from "../lib/api";
 
 const MainWrap = styled.div`
-  margin: 9rem 25.9rem;
+  color: white;
+
   .main {
     display: flex;
-    justify-content: center;
+  }
+
+  .dreams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 `;
 
 const MainPage = () => {
-  const [dreams, setDreams] = useState(null);
+  const [auctions, setAuctions] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      const temp = await ApiService.getAuctions();
+      temp && setAuctions(temp);
+    })();
+  }, []);
 
   return (
     <MainWrap>
@@ -23,9 +37,22 @@ const MainPage = () => {
         <div style={{ width: "2.539rem" }} />
         <UserCard />
       </div>
+      <div style={{ height: "4.7rem" }} />
       <div className="dreams">
         {/* DB 연결 후 useEffect 써서 dreams.map(<DreamCard />) 로 변경해야 함 */}
-        <DreamCard />
+        {auctions &&
+          auctions.map((auction) => {
+            const dream = auction.dream;
+            return (
+              <DreamCard
+                key={dream._id}
+                image={dream.image}
+                title={dream.title}
+                keyword={dream.keyword}
+                price={dream.price}
+              />
+            );
+          })}
       </div>
     </MainWrap>
   );

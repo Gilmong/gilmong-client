@@ -7,8 +7,12 @@ import DetailPage from "./pages/DetailPage";
 import UploadPage from "./pages/UploadPage";
 
 const AppWrap = styled.div`
-  width: 100vw;
-  height: 100vh;
+  .app {
+    margin: 4rem 26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 function App() {
@@ -16,26 +20,28 @@ function App() {
     <Router>
       <Switch>
         <AppWrap>
-          <Route path="/" exact component={MainPage} />
-          <Route
-            path="/mypage/:id"
-            breadcrumb="MyPage"
-            component={(props) => <MyPage userId={props.match.params.id} />}
-          />
-          <Route
-            path="/upload/:id"
-            breadcrumb="Upload"
-            component={(props) => (
-              <UploadPage dreamId={props.match.params.id} />
-            )}
-          />
-          <Route
-            path="/detail/:id"
-            breadcrumb="Detail"
-            component={(props) => (
-              <DetailPage dreamId={props.match.params.id} />
-            )}
-          />
+          <div className="app">
+            <Route path="/" exact component={MainPage} />
+            <Route
+              path="/mypage/:id"
+              breadcrumb="MyPage"
+              component={(props) => <MyPage userId={props.match.params.id} />}
+            />
+            <Route
+              path="/upload/:id"
+              breadcrumb="Upload"
+              component={(props) => (
+                <UploadPage dreamId={props.match.params.id} />
+              )}
+            />
+            <Route
+              path="/detail/:id"
+              breadcrumb="Detail"
+              component={(props) => (
+                <DetailPage dreamId={props.match.params.id} />
+              )}
+            />
+          </div>
         </AppWrap>
       </Switch>
     </Router>
