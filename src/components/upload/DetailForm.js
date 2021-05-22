@@ -42,12 +42,14 @@ const DetailForm = ({getUserData}) => {
                 </div>
                 <img className="header__back--upload" src={ButtonUpload} alt="" onClick={handleSubmit}/>
             </div>
+            <div id="text">나의 길몽은</div>
             <div className="detail">
-                <DreamCanvas className="detail__canvas" />
+                <DreamCanvas />
                 <div className="detail__info">
                     <form>
                         <input
-                        className="detail__info--form" 
+                        className="detail__info--form"
+                        id="first"
                         name="dreamName"
                         type="text"
                         value={inputs.dreamName}
@@ -95,15 +97,12 @@ const DetailForm = ({getUserData}) => {
 export default DetailForm;
 
 const DetailFormWrap = styled.div`
-    /* border-top: 0.1rem solid;
-    margin-top: 3.5rem; */
     .header {
-        width: 141.7rem;
-        height: 15rem;
-        /* margin-top: 3.5rem; */
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-top: 0.1rem solid;
+        border-bottom: 0.1rem solid;
 
         &__front {
             &--back {
@@ -122,6 +121,11 @@ const DetailFormWrap = styled.div`
             height: 6.5rem;
         }
     }
+    #text {
+        font-size: 2.4rem;
+        margin-top: 9rem;
+        margin-bottom: 0.3rem;
+    }
 
     .detail {
         width: 140.1rem;
@@ -129,6 +133,7 @@ const DetailFormWrap = styled.div`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        /* margin-top: 9rem; */
 
         &__info {
             &--form {
@@ -137,7 +142,9 @@ const DetailFormWrap = styled.div`
                 margin-top: 1.6rem;
                 font-size: 2.4rem;
             }
-
+            #first {
+                margin-top: 0;
+            }
             #last {
                 height: 37rem;
             }

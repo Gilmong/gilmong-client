@@ -1,4 +1,5 @@
 import React, {createRef, useEffect} from 'react';
+import styled from 'styled-components';
 
 const DreamCanvas = () => {
     let canvasRef = createRef();
@@ -36,7 +37,19 @@ const DreamCanvas = () => {
         painting = false;
     }
 
-    return <canvas ref={canvasRef}></canvas>;
+    return (<DreamCanvasWrap>
+            <canvas ref={canvasRef} id="canvas"></canvas>
+        </DreamCanvasWrap>
+    );
 };
 
 export default DreamCanvas;
+
+const DreamCanvasWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    #canvas {
+        width: 104.4rem;
+        border: 0.1rem solid;
+    }
+`;
