@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+```
+<p align="center">
+    <img src="" alt="Logo" width="150" height="150">
+</p>
+<h2 align="center"><a href=""></a></h2>
+<br />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 소개
 
-## Available Scripts
+🌐 ~ 하는 웹 서비스입니다.
 
-In the project directory, you can run:
+PROJECT PERIOD: 2020.11.21 ~ 2020.11.22, 2021.01.25 ~ 2021.02.09
 
-### `npm start`
+## ✨ 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🧔 메인 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![main-img](https://drive.google.com/uc?export=view&id=188immHs5Fxz-msmyC4OtxxI6XbzJstyb)
 
-### `npm test`
+💡 메인 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [1] 자신의 출생연도를 입력하고 테스트를 시작한다.
 
-### `npm run build`
+### 🧔 테스트
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![test-img](https://drive.google.com/uc?export=view&id=1TL_bBSZIz5dlTQg-yibkxv5WT6KZynxg)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+💡 테스트
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [1] 90년대 유행했던 짤을 보고 정답을 맞히며 테스트를 진행한다.
 
-### `npm run eject`
+### 🧔 결과
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![result-img](https://drive.google.com/uc?export=view&id=1jB3OGGquRms-40USpIM7EWCeV5KHqqdx)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+💡 결과
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [1] 테스트 결과에 따라 레벨을 4단계로 나누어 자신의 레벨(점수 및 연령대별 상위 퍼센트)을 보여준다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [2] 레벨에 따른 영상을 추천해준다!
 
-## Learn More
+- [3] 테스트를 처음부터 다시 진행하거나 최종 결과를 공유할 수 있다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🗂 프로젝트 구조
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+​```
+public
+ ┣ images
+ ┃ ┣ Question_1.png
+ ┃ ┣ ...
+ ┃ ┗ result-background.png
+ ┣ favicon.ico
+ ┣ index.html
+ ┗ meta-image.png
+src
+ ┣ assets
+ ┃ ┣ icons
+ ┃ ┃ ┣ btn-retry.svg
+ ┃ ┃ ┣ ...
+ ┃ ┃ ┗ result-sketchbook.svg
+ ┃ ┗ images
+ ┃ ┃ ┣ landing.png
+ ┃ ┃ ┣ ...
+ ┃ ┃ ┗ result-sketchbook.png
+ ┣ components
+ ┃ ┣ style
+ ┃ ┃ ┗ Landing.scss
+ ┃ ┗ Background.js
+ ┣ lib
+ ┃ ┣ api
+ ┃ ┃ ┗ Answer.js
+ ┃ ┗ data
+ ┃ ┃ ┗ Question.js
+ ┣ pages
+ ┃ ┣ LandingPage.js
+ ┃ ┣ QuestionPage.js
+ ┃ ┗ ResultPage.js
+ ┣ App.css
+ ┣ App.js
+ ┣ index.css
+ ┣ index.js
+ ┗ reportWebVitals.js
+​```
 
-### Code Splitting
+## 🛠 사용 기술
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Front-End | Back-End | DataBase | Front-Server | Back-Server | Tool |
+| --- | --- | --- | --- | --- | --- |
+| JavaScript<br>React<br>Axios | JavaScript<br>Node.js | MySQL | Vercel | AWS EC2 | Git<br>Figma<br>Notion |
 
-### Analyzing the Bundle Size
+​```
+"@testing-library/jest-dom": "^5.11.4",
+"@testing-library/react": "^11.1.0",
+"@testing-library/user-event": "^12.1.10",
+"axios": "^0.21.0",
+"node-sass": "4",
+"react": "^17.0.1",
+"react-dom": "^17.0.1",
+"react-router-dom": "^5.2.0",
+"react-scripts": "4.0.0",
+"web-vitals": "^0.2.4",
+"styled-components": "^5.2.1"
+​```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🖥 Local 실행 방법
 
-### Making a Progressive Web App
+#### [1] Yarn 설치
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[Yarn 설치 바로가기](https://classic.yarnpkg.com/en/docs/install#windows-stable)
 
-### Advanced Configuration
+#### [2] Clone the Repo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+​```sh
+git clone https://github.com/SOPT27-JOB/IN-CYWORLD-FRONT.git
+​```
 
-### Deployment
+#### [3] Install Packages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+​```sh
+yarn
+​```
 
-### `npm run build` fails to minify
+#### [4] Run the Project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+​```sh
+yarn start
+​```
+
+## 💻 개발자
+
+| <img src="https://avatars1.githubusercontent.com/u/48766355?s=460&u=0419d273d1a31539ee4f1151cdacb6fefd45dacc&v=4" width="70" height="70"><br>[김민지](https://github.com/mnxmnz) | <img src="https://avatars.githubusercontent.com/u/54431522?s=460&u=2202642a1809a52fa34f00e580e6d6ab5796a92b&v=4" width="70" height="70"><br>[김정욱](https://github.com/neity16) | <img src="https://avatars.githubusercontent.com/u/72637095?s=460&u=b6afb83e8ef6b983585d545e3456a6b80b238357&v=4" width="70" height="70"><br>[안채린](https://github.com/chaerin00) |
+| --- | --- | --- |
+
+### :link: URL
+
+- [인-싸이월드 바로가기](https://in-cyworld.vercel.app/)
+```
+
+https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
