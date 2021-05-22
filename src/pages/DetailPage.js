@@ -4,7 +4,7 @@ import DetailHeader from "../components/detail/DetailHeader";
 import DreamDetail from "../components/detail/DreamDetail";
 import Comment from "../components/detail/Comment";
 
-const DetailPage = () => {
+const DetailPage = ({ dreamId }) => {
   return (
     <DetailPageWrapper>
       <DetailHeader />
