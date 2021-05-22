@@ -1,94 +1,101 @@
-```
 <p align="center">
-    <img src="" alt="Logo" width="150" height="150">
+  <img src="" alt="Logo" width="150" height="150">
+  <p align="center" style="font-size: 30px; font-weight: 300">길몽 거래소</p>
 </p>
-<h2 align="center"><a href=""></a></h2>
+
+<h2 align="center">
+  <a href=""></a>
+</h2>
+
 <br />
 
 ## 프로젝트 소개
 
-🌐 ~ 하는 웹 서비스입니다.
+🌐 **이용자들이 자신의 꿈을 가벼운 그림과 함께 업로드하면, 꿈이 경매에 올라 최고가 낙찰을 받고 거래되는 웹 서비스입니다.**
 
-PROJECT PERIOD: 2020.11.21 ~ 2020.11.22, 2021.01.25 ~ 2021.02.09
+> PROJECT PERIOD: 2021.05.22 ~ 2021.05.23
+
+<br />
 
 ## ✨ 주요 기능
 
-### 🧔 메인 
+### 🧔 메인
 
-![main-img](https://drive.google.com/uc?export=view&id=188immHs5Fxz-msmyC4OtxxI6XbzJstyb)
+![main-img]()
 
-💡 메인 
+💡 메인 기능
 
-- [1] 자신의 출생연도를 입력하고 테스트를 시작한다.
+- 오늘의 인기 꿈
+- 꿈 판매하기
+- 나의 코인
+- 구매자의 거래 대기 건수
+- 구매자의 낙찰 성공 건수
+- 거래가 진행중인 길몽
+
+<br />
 
 ### 🧔 테스트
 
-![test-img](https://drive.google.com/uc?export=view&id=1TL_bBSZIz5dlTQg-yibkxv5WT6KZynxg)
+![test-img]()
 
 💡 테스트
 
-- [1] 90년대 유행했던 짤을 보고 정답을 맞히며 테스트를 진행한다.
+-
+
+<br />
 
 ### 🧔 결과
 
-![result-img](https://drive.google.com/uc?export=view&id=1jB3OGGquRms-40USpIM7EWCeV5KHqqdx)
+![result-img]()
 
 💡 결과
 
-- [1] 테스트 결과에 따라 레벨을 4단계로 나누어 자신의 레벨(점수 및 연령대별 상위 퍼센트)을 보여준다.
+-
 
-- [2] 레벨에 따른 영상을 추천해준다!
-
-- [3] 테스트를 처음부터 다시 진행하거나 최종 결과를 공유할 수 있다.
+<br />
 
 ## 🗂 프로젝트 구조
 
-​```
+```
 public
- ┣ images
- ┃ ┣ Question_1.png
- ┃ ┣ ...
- ┃ ┗ result-background.png
- ┣ favicon.ico
- ┣ index.html
- ┗ meta-image.png
+ ┗ index.html
 src
  ┣ assets
  ┃ ┣ icons
- ┃ ┃ ┣ btn-retry.svg
- ┃ ┃ ┣ ...
- ┃ ┃ ┗ result-sketchbook.svg
- ┃ ┗ images
- ┃ ┃ ┣ landing.png
- ┃ ┃ ┣ ...
- ┃ ┃ ┗ result-sketchbook.png
+ ┃ ┃ ┣
+ ┃ ┃ ┣
+ ┃ ┃ ┗
+ ┃ ┗ img
+ ┃ ┃ ┣
+ ┃ ┃ ┣
+ ┃ ┃ ┗
  ┣ components
- ┃ ┣ style
- ┃ ┃ ┗ Landing.scss
- ┃ ┗ Background.js
+ ┃ ┣ common
+ ┃ ┣ detail
+ ┃ ┣ main
+ ┃ ┣ mypage
+ ┃ ┗ upload
  ┣ lib
- ┃ ┣ api
- ┃ ┃ ┗ Answer.js
- ┃ ┗ data
- ┃ ┃ ┗ Question.js
+ ┃ ┗ api.js
  ┣ pages
- ┃ ┣ LandingPage.js
- ┃ ┣ QuestionPage.js
- ┃ ┗ ResultPage.js
- ┣ App.css
+ ┃ ┣ DetailPage.js
+ ┃ ┣ MainPage.js
+ ┃ ┣ UploadPage.js
+ ┃ ┗ MyPage.js
  ┣ App.js
  ┣ index.css
- ┣ index.js
- ┗ reportWebVitals.js
-​```
+ ┗ index.js
+```
+
+<br />
 
 ## 🛠 사용 기술
 
-| Front-End | Back-End | DataBase | Front-Server | Back-Server | Tool |
-| --- | --- | --- | --- | --- | --- |
-| JavaScript<br>React<br>Axios | JavaScript<br>Node.js | MySQL | Vercel | AWS EC2 | Git<br>Figma<br>Notion |
+| Front-End                    | Back-End              | DataBase | Front-Server | Back-Server | Tool                   |
+| ---------------------------- | --------------------- | -------- | ------------ | ----------- | ---------------------- |
+| JavaScript<br>React<br>Axios | JavaScript<br>Node.js |          | Vercel       | AWS EC2     | Git<br>Figma<br>Notion |
 
-​```
+```
 "@testing-library/jest-dom": "^5.11.4",
 "@testing-library/react": "^11.1.0",
 "@testing-library/user-event": "^12.1.10",
@@ -100,40 +107,46 @@ src
 "react-scripts": "4.0.0",
 "web-vitals": "^0.2.4",
 "styled-components": "^5.2.1"
-​```
+```
+
+<br />
 
 ## 🖥 Local 실행 방법
 
-#### [1] Yarn 설치
+#### [1] npm 설치
 
-[Yarn 설치 바로가기](https://classic.yarnpkg.com/en/docs/install#windows-stable)
+[npm 설치 바로가기]()
 
 #### [2] Clone the Repo
 
-​```sh
-git clone https://github.com/SOPT27-JOB/IN-CYWORLD-FRONT.git
-​```
+```sh
+git clone https://github.com/SOPT-KLP/gilmong-client.git
+```
 
 #### [3] Install Packages
 
-​```sh
-yarn
-​```
+```sh
+npm i
+```
 
 #### [4] Run the Project
 
-​```sh
-yarn start
-​```
+```sh
+npm start
+```
+
+<br />
 
 ## 💻 개발자
 
-| <img src="https://avatars1.githubusercontent.com/u/48766355?s=460&u=0419d273d1a31539ee4f1151cdacb6fefd45dacc&v=4" width="70" height="70"><br>[김민지](https://github.com/mnxmnz) | <img src="https://avatars.githubusercontent.com/u/54431522?s=460&u=2202642a1809a52fa34f00e580e6d6ab5796a92b&v=4" width="70" height="70"><br>[김정욱](https://github.com/neity16) | <img src="https://avatars.githubusercontent.com/u/72637095?s=460&u=b6afb83e8ef6b983585d545e3456a6b80b238357&v=4" width="70" height="70"><br>[안채린](https://github.com/chaerin00) |
-| --- | --- | --- |
+|  이름  | 사진 | 주소 |
+| :----: | :--: | :--: |
+| 김소령 |      |      |
+| 나정현 |      |      |
+| 박찬순 |      |      |
+
+<br />
 
 ### :link: URL
 
-- [인-싸이월드 바로가기](https://in-cyworld.vercel.app/)
-```
-
-https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [길몽거래소 바로가기]()
