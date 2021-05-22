@@ -23,7 +23,7 @@ function App() {
         <Route
           path="/detail/:id"
           breadcrumb="Detail"
-          component={(props) => <DetailPage userId={props.match.params.id} />}
+          component={(props) => <DetailPage dreamId={props.match.params.id} />}
         />
       </Switch>
     </Router>
