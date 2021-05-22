@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 
 const DreamCardWrap = styled.div`
   .dreamCard {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -34,21 +35,25 @@ const DreamCardWrap = styled.div`
   }
 `;
 
-const DreamCard = ({ image, idx, title, keyword, price }) => {
+const DreamCard = ({ dream, idx, history }) => {
+  const handleClick = () => {
+    history.push(`/detail/${dream._id}`);
+  };
+
   return (
     <DreamCardWrap idx={idx}>
-      <div className="dreamCard">
+      <div className="dreamCard" onClick={handleClick}>
         <img
-          src={image}
+          src={dream.image}
           alt=""
           className="dreamCard__img"
           style={{ width: "33rem", height: "31rem" }}
         />
         <div className="dreamCard__desc">
-          <div className="dreamCard__desc--title">{title}</div>
+          <div className="dreamCard__desc--title">{dream.title}</div>
           <div style={{ height: "0.31rem" }} />
           <div className="dreamCard__desc--tags">
-            {keyword.map((tag) => (
+            {dream.keyword.map((tag) => (
               <span className="dreamCard__desc--tag">#{tag} </span>
             ))}
           </div>
@@ -64,7 +69,7 @@ const DreamCard = ({ image, idx, title, keyword, price }) => {
               className="deal__price"
               style={{ fontWeight: "700", fontSize: "1.5rem" }}
             >
-              {price}{" "}
+              {dream.price}{" "}
             </span>
             코인
           </div>

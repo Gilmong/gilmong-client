@@ -15,4 +15,15 @@ apiService.getAuctions = async () => {
   }
 };
 
+apiService.getAuction = async (id) => {
+  try {
+    const auction = await axios.get(url + "/auction/" + id);
+    console.log(auction);
+    return auction; // rawData의 console을 찍어보시면 data 아래의 data가 저희가 원하는 데이터입니다
+  } catch (e) {
+    console.log("[FAIL] GET card data");
+    return e;
+  }
+};
+
 export default apiService;
