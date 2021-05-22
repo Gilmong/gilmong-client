@@ -97,7 +97,16 @@ const DetailForm = ({getUserData}) => {
 export default DetailForm;
 
 const DetailFormWrap = styled.div`
+    color: white;
+    background-color: black;
     .header {
+        margin-top: 3.5rem;
+        /* width: 141.7rem;
+        height: 15rem; */
+        padding-top: 5.821rem;
+        padding-bottom: 4.118rem;
+        padding-left: 2.43rem;
+        padding-right: 2.6rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -121,26 +130,33 @@ const DetailFormWrap = styled.div`
             height: 6.5rem;
         }
     }
+
     #text {
         font-size: 2.4rem;
         margin-top: 9rem;
         margin-bottom: 0.3rem;
+        margin-left: 2.59rem;
     }
 
     .detail {
-        width: 140.1rem;
-        height: 57rem;
+        /* width: 140.1rem;
+        height: 57rem; */
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         /* margin-top: 9rem; */
+        margin-left: 2.59rem;
 
         &__info {
+            margin-left: 2.7rem;
+            margin-right: 2.6rem;
             &--form {
                 width: 33rem;
                 height: 5rem;
                 margin-top: 1.6rem;
                 font-size: 2.4rem;
+                border-color: white;
+                background-color: black;
             }
             #first {
                 margin-top: 0;

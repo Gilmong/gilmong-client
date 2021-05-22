@@ -51,5 +51,6 @@ const DreamCanvasWrap = styled.div`
     #canvas {
         width: 104.4rem;
         border: 0.1rem solid;
+        border-color: white;
     }
 `;
