@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { withRouter } from "react-router-dom";
 
 import DealCard from "../components/main/DealCard";
 import DreamCard from "../components/main/DreamCard";
@@ -21,7 +22,7 @@ const MainWrap = styled.div`
   }
 `;
 
-const MainPage = () => {
+const MainPage = ({ history }) => {
   const [auctions, setAuctions] = useState(null);
 
   useEffect(() => {
@@ -44,20 +45,12 @@ const MainPage = () => {
         {auctions &&
           auctions.map((auction, idx) => {
             const dream = auction.dream;
-            return (
-              <DreamCard
-                key={dream._id}
-                idx={idx}
-                image={dream.image}
-                title={dream.title}
-                keyword={dream.keyword}
-                price={dream.price}
-              />
-            );
+
+            return <DreamCard key={dream._id} idx={idx} dream={dream} />;
           })}
       </div>
     </MainWrap>
   );
 };
 
-export default MainPage;
+export default withRouter(MainPage);
