@@ -5,14 +5,20 @@ const DetailHeader = () => {
     <DetailHeaderWrapper>
       <header className="detail-header">
         <div className="detail-header__back"></div>
-        <div className="detail-header__dream">
-          <div className="detail-header__dream__title"></div>
-          <div className="detail-header__dream__tags"></div>
-        </div>
+        <div className="detail-header__title"></div>
       </header>
     </DetailHeaderWrapper>
   );
 };
 
 export default DetailHeader;
-const DetailHeaderWrapper = styled.div``;
+const DetailHeaderWrapper = styled.div`
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .detail-header__back {
+    margin-left: 25px;
+  }
+`;
