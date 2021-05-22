@@ -1,7 +1,7 @@
-import React, {createRef, useEffect} from 'react';
+import React, {createRef, useEffect, useState} from 'react';
 import styled from 'styled-components';
 
-const DreamCanvas = () => {
+const DreamCanvas = (props) => {
     let canvasRef = createRef();
     let ctx;
     let painting = false;
@@ -19,7 +19,7 @@ const DreamCanvas = () => {
     function onMouseMove(event) {
         const x = event.offsetX;
         const y = event.offsetY;
-        console.log(x);
+        // console.log(x);
     
         if (!painting) {
             ctx.beginPath();
@@ -37,6 +37,14 @@ const DreamCanvas = () => {
     function stopPainting(event) {
         painting = false;
     }
+
+    // function handleSaveClick() {
+    //     const image = canvas.toDataURL();
+    //     const link = document.createElement("a");
+    //     link.href = image;
+    //     link.download = "myDream";
+    //     link.click();
+    // }
 
     return (<DreamCanvasWrap>
             <canvas ref={canvasRef} id="canvas"></canvas>

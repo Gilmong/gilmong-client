@@ -4,6 +4,7 @@ import DreamCanvas from "../../components/upload/DreamCanvas";
 import ButtonBack from '../../assets/uploadpage/ButtonBack.svg';
 import ButtonUpload from '../../assets/uploadpage/ButtonUpload.svg';
 import Logo from '../../assets/uploadpage/Logo.svg';
+import {post} from 'axios';
 
 const DetailForm = ({getUserData}) => {
     
@@ -12,13 +13,8 @@ const DetailForm = ({getUserData}) => {
         dreamKeyword: "",
         dreamPrice: "",
         dreamDescription: "",
-        dreamPicture: ""
+        dreamImage: ""
     })
-
-    const getDreamPicture = async (image) => {
-        console.log(image)
-        // alert("done")
-    };
 
     const handleChange = (e) => {
         console.log(0);
@@ -27,23 +23,23 @@ const DetailForm = ({getUserData}) => {
             [e.target.name]: e.target.value
         });
     };
-    // function handleSaveClick() {
-    //     const image = canvas.toDataURL();
-    //     const link = document.createElement("a");
-    //     link.href = image;
-    //     link.download = "PaintJS by soryeongk";
-    //     link.click();
-    // }
+
+    const [imgData, setData] = useState("init");
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        inputs.dreamPicture = 
-        getUserData(inputs);
+        const config = {
+            headers: {
+            'content-type': 'multipart/form-data'
+            }
+        }
+        getUserData(post('http://13.125.249.7:5000/api/dream', inputs, config));
         setInputs({
             dreamName: "",
             dreamKeyword: "",
             dreamPrice: "",
             dreamDescription: "",
-            dreamPicture: ""
+            dreamImage: ""
         });
     };
 
@@ -58,7 +54,7 @@ const DetailForm = ({getUserData}) => {
             </div>
             <div id="text">나의 길몽은</div>
             <div className="detail">
-                <DreamCanvas getDreamPicture={getDreamPicture}/>
+                <DreamCanvas setData={setData}/>
                 <div className="detail__info">
                     <form>
                         <input
