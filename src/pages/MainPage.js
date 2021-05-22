@@ -10,13 +10,14 @@ const MainWrap = styled.div`
   color: white;
 
   .main {
+    width: 100%;
     display: flex;
   }
 
   .dreams {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 `;
 
@@ -41,11 +42,12 @@ const MainPage = () => {
       <div className="dreams">
         {/* DB 연결 후 useEffect 써서 dreams.map(<DreamCard />) 로 변경해야 함 */}
         {auctions &&
-          auctions.map((auction) => {
+          auctions.map((auction, idx) => {
             const dream = auction.dream;
             return (
               <DreamCard
                 key={dream._id}
+                idx={idx}
                 image={dream.image}
                 title={dream.title}
                 keyword={dream.keyword}

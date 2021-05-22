@@ -2,8 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const UserCardWrap = styled.div`
+  width: 30%;
+
   .userCard {
-    width: 51.5rem;
+    width: 100%;
     height: 34.238rem;
     display: flex;
     flex-direction: column;
@@ -17,7 +19,7 @@ const UserCardWrap = styled.div`
 
       > * {
         border: 1px solid #dbae6e;
-        width: 24.5rem;
+        width: 48%;
         box-sizing: border-box;
         padding: 1.857rem 3.505rem;
       }

@@ -8,6 +8,7 @@ import UploadPage from "./pages/UploadPage";
 
 const AppWrap = styled.div`
   .app {
+    box-sizing: border-box;
     margin: 4rem 26rem;
     display: flex;
     flex-direction: column;

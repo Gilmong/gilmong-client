@@ -34,9 +34,9 @@ const DreamCardWrap = styled.div`
   }
 `;
 
-const DreamCard = ({ image, title, keyword, price }) => {
+const DreamCard = ({ image, idx, title, keyword, price }) => {
   return (
-    <DreamCardWrap>
+    <DreamCardWrap idx={idx}>
       <div className="dreamCard">
         <img
           src={image}

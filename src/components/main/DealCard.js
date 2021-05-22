@@ -5,11 +5,12 @@ import ArrowBack from "../../assets/img/arrow_back.png";
 import ArrowForward from "../../assets/img/arrow_forward.png";
 
 const DealCardWrap = styled.div`
+  width: 70%;
+
   .dealCard {
     padding: 3.35rem 3.214rem;
     background-color: #878787;
     color: white;
-    width: 86rem;
     position: relative;
 
     &__title {
@@ -21,7 +22,7 @@ const DealCardWrap = styled.div`
       position: absolute;
       top: 3.35rem;
       right: 5.123rem;
-      fontsize: 2.4rem;
+      font-size: 2.4rem;
     }
 
     &__bottom {
